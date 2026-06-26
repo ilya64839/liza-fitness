@@ -10,7 +10,7 @@
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="icon-192.png">
 <title>Лиза — Тренер по пилатесу</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2032%2032%27%3E%3Crect%20width%3D%2732%27%20height%3D%2732%27%20rx%3D%278%27%20fill%3D%27%23d4784a%27/%3E%3Ctext%20x%3D%2716%27%20y%3D%2723%27%20font-family%3D%27serif%27%20font-size%3D%2720%27%20font-weight%3D%27300%27%20text-anchor%3D%27middle%27%20fill%3D%27white%27%3E%D0%9B%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2032%2032%27%3E%3Crect%20width%3D%2732%27%20height%3D%2732%27%20rx%3D%278%27%20fill%3D%27%23d4784a%27/%3E%3Ccircle%20cx%3D%2716%27%20cy%3D%279%27%20r%3D%273%27%20fill%3D%27white%27/%3E%3Cpath%20d%3D%27M16%2013v5M16%2013l-5%20-3M16%2013l5%20-3M16%2018l-4%206M16%2018l4%206%27%20stroke%3D%27white%27%20stroke-width%3D%271.6%27%20stroke-linecap%3D%27round%27%20fill%3D%27none%27/%3E%3C/svg%3E">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -40,7 +40,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(253,248,240,
 .nav-mobile-btn span{display:block;width:22px;height:1.5px;background:var(--text)}
 
 /* HERO */
-.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:88px 56px 64px;gap:64px;max-width:1300px;margin:0 auto}
+.hero{min-height:100vh;min-height:100dvh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:88px 56px 64px;gap:64px;max-width:1300px;margin:0 auto}
 .hero-tag{display:inline-flex;align-items:center;gap:8px;background:var(--cream2);color:var(--brown);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;padding:6px 16px;border-radius:100px;margin-bottom:28px;border:1px solid var(--cream3)}
 .hero-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent)}
 .hero-title{font-family:Georgia,'Times New Roman',serif;font-size:clamp(48px,5.5vw,82px);font-weight:300;line-height:1.05;letter-spacing:-0.01em;margin-bottom:24px}
@@ -56,8 +56,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(253,248,240,
 .card-trainer-name{font-family:Georgia,'Times New Roman',serif;font-size:28px;font-weight:400;margin-bottom:4px}
 .card-trainer-sub{font-size:11px;color:var(--text3);letter-spacing:0.10em;text-transform:uppercase;margin-bottom:20px}
 .services-pills{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
-.pill{background:var(--cream2);color:var(--text2);font-size:12px;padding:5px 14px;border-radius:100px;letter-spacing:0.04em}
-.pill.active{background:var(--accent);color:var(--white)}
+.pill{background:var(--cream2);color:var(--text2);font-size:12px;padding:5px 14px;border-radius:100px;letter-spacing:0.04em;text-decoration:none;display:inline-block;cursor:pointer;transition:all 0.2s;border:none}
+.pill.active{background:var(--text);color:var(--cream)}
+.pill.active:hover{background:var(--brown-dark)}
 .card-stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--cream2);padding-top:20px}
 .stat{text-align:center}
 .stat-num{font-family:Georgia,'Times New Roman',serif;font-size:34px;font-weight:300;line-height:1;color:var(--text)}
@@ -134,7 +135,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(253,248,240,
 .form-sub{font-size:13px;color:var(--text3);margin-bottom:28px}
 .form-group{margin-bottom:18px}
 .form-label{display:block;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text2);margin-bottom:8px;font-weight:500}
-.form-input{width:100%;padding:12px 16px;border:1.5px solid var(--cream3);border-radius:var(--r);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:15px;color:var(--text);background:var(--cream);transition:border-color 0.2s;outline:none}
+.form-input{width:100%;padding:12px 16px;border:1.5px solid var(--cream3);border-radius:var(--r);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:16px;color:var(--text);background:var(--cream);transition:border-color 0.2s;outline:none}
 .form-input:focus{border-color:var(--accent);background:var(--white)}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .svc-opts{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
@@ -265,7 +266,7 @@ footer{background:#1a1008;color:var(--cream);padding:52px 56px 36px;text-align:c
 .wt-time-del{background:none;border:none;cursor:pointer;color:var(--text3);font-size:14px;line-height:1;padding:0;transition:color 0.2s}
 .wt-time-del:hover{color:#a33030}
 .wt-add-row{display:flex;gap:6px;align-items:center;margin-top:7px}
-.wt-time-input{padding:6px 10px;border:1.5px solid var(--cream3);border-radius:8px;font-size:13px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--white);outline:none;color:var(--text);width:100px}
+.wt-time-input{padding:6px 10px;border:1.5px solid var(--cream3);border-radius:8px;font-size:16px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--white);outline:none;color:var(--text);width:100px}
 .wt-time-input:focus{border-color:var(--accent)}
 .wt-add-btn{background:var(--accent);color:var(--white);border:none;padding:6px 14px;border-radius:8px;font-size:12px;cursor:pointer;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-weight:500}
 .wt-save-btn{width:100%;background:var(--text);color:var(--cream);border:none;padding:12px;border-radius:100px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;transition:background 0.2s;font-weight:500;margin-top:4px}
@@ -382,10 +383,10 @@ footer{background:#1a1008;color:var(--cream);padding:52px 56px 36px;text-align:c
       <div class="card-trainer-name">Елизавета</div>
       <div class="card-trainer-sub">Сертифицированный тренер</div>
       <div class="services-pills">
-        <span class="pill active">Пилатес</span>
-        <span class="pill">Стретчинг</span>
-        <span class="pill">Функционал</span>
-        <span class="pill">Группы</span>
+        <a href="#services" class="pill active" onclick="goBook('pilates');return false">Пилатес</a>
+        <a href="#services" class="pill active" onclick="goBook('stretch');return false">Стретчинг</a>
+        <a href="#services" class="pill active" onclick="goBook('functional');return false">Функционал</a>
+        <a href="#groups" class="pill active" onclick="document.getElementById('groups').scrollIntoView({behavior:'smooth'});return false">Группы</a>
       </div>
       <div class="card-stats">
         <div class="stat"><div class="stat-num">2+</div><div class="stat-label">Года опыта</div></div>
@@ -662,7 +663,10 @@ let S={selSvc:null,selDay:null,selTime:null,weekOff:0,adminIn:false,weekTemplate
 
 async function sb(method,table,body,filter=''){
   try{
-    const res=await fetch(`${SB_URL}/rest/v1/${table}${filter}`,{method,headers:{'apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY,'Content-Type':'application/json','Prefer':method==='POST'?'return=representation':''},body:body?JSON.stringify(body):undefined});
+    const ctrl=new AbortController();
+    const timer=setTimeout(()=>ctrl.abort(),10000);
+    const res=await fetch(`${SB_URL}/rest/v1/${table}${filter}`,{method,signal:ctrl.signal,headers:{'apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY,'Content-Type':'application/json','Prefer':method==='POST'?'return=representation':''},body:body?JSON.stringify(body):undefined});
+    clearTimeout(timer);
     if(!res.ok){console.error(await res.text());return null;}
     const t=await res.text();return t?JSON.parse(t):null;
   }catch(e){console.error(e);return null;}
@@ -706,7 +710,8 @@ async function renderGroups(){
   const grid=document.getElementById('groupsGrid');
   grid.innerHTML='<div class="no-groups"><span class="loading-dot"></span><span class="loading-dot"></span><span class="loading-dot"></span></div>';
   const data=await dbGet('groups','?order=date.asc,time.asc');
-  if(!data||!data.length){grid.innerHTML='<div class="no-groups">Пока нет запланированных групп.</div>';return;}
+  if(data===null){grid.innerHTML='<div class="no-groups">Не удалось загрузить расписание. Проверьте интернет и обновите страницу.</div>';return;}
+  if(!data.length){grid.innerHTML='<div class="no-groups">Пока нет запланированных групп.</div>';return;}
   const now=new Date();now.setHours(0,0,0,0);
   const fut=data.filter(g=>new Date(g.date)>=now);
   if(!fut.length){grid.innerHTML='<div class="no-groups">Пока нет запланированных групп.</div>';return;}
@@ -1000,7 +1005,13 @@ async function init(){
   renderGroups();
 }
 init();
-if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.getRegistrations().then(regs=>{
+    regs.forEach(r=>r.unregister());
+  }).finally(()=>{
+    navigator.serviceWorker.register('sw.js?v=2').catch(()=>{});
+  });
+}
 </script>
 </body>
 </html>

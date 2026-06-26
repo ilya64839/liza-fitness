@@ -4,8 +4,8 @@
   "description": "Запись к персональному тренеру Елизавете",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#faf7f2",
-  "theme_color": "#f5f0eb",
+  "background_color": "#fdf8f0",
+  "theme_color": "#d4784a",
   "orientation": "portrait-primary",
   "icons": [
     {
