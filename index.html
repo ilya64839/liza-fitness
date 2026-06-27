@@ -206,6 +206,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(253,248,240,
 .astat-num{font-family:Georgia,'Times New Roman',serif;font-size:52px;font-weight:300;line-height:1}
 .astat-label{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:11px;letter-spacing:0.10em;text-transform:uppercase;margin-top:6px;font-weight:500}
 
+/* КОНТАКТЫ */
+.contacts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.contact-card{background:var(--white);border-radius:var(--r2);padding:28px 24px;text-decoration:none;display:block;border:1px solid var(--cream3);transition:all 0.25s}
+.contact-card:hover{box-shadow:0 12px 40px rgba(30,16,8,0.10);transform:translateY(-3px);border-color:var(--accent)}
+.contact-icon{width:44px;height:44px;border-radius:50%;background:var(--cream2);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.contact-icon svg{width:20px;height:20px;stroke:var(--accent);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.contact-title{font-size:17px;font-weight:600;color:var(--text);margin-bottom:6px}
+.contact-sub{font-size:14px;color:var(--text2);line-height:1.5}
+
 /* FOOTER */
 footer{background:#1a1008;color:var(--cream);padding:52px 56px 36px;text-align:center}
 .footer-logo{font-family:Georgia,'Times New Roman',serif;font-size:28px;font-weight:400;margin-bottom:6px}
@@ -329,6 +338,7 @@ footer{background:#1a1008;color:var(--cream);padding:52px 56px 36px;text-align:c
   .groups-wrap,.about-wrap,.profile-wrap{padding:60px 28px}
   .booking-inner,.about-inner{grid-template-columns:1fr}
   .booking-info{position:static}
+  .contacts-grid{grid-template-columns:1fr 1fr}
   footer{padding:44px 28px 28px}
 }
 @media(max-width:640px){
@@ -341,6 +351,7 @@ footer{background:#1a1008;color:var(--cream);padding:52px 56px 36px;text-align:c
   .section,.booking-wrap{padding:52px 16px}
   .groups-wrap,.about-wrap,.profile-wrap{padding:52px 16px}
   .services-grid{grid-template-columns:1fr}
+  .contacts-grid{grid-template-columns:1fr}
   .form-wrap{padding:24px 16px}
   .form-row,.ca-grid{grid-template-columns:1fr}
   .time-slots{grid-template-columns:repeat(3,1fr)}
@@ -360,6 +371,7 @@ footer{background:#1a1008;color:var(--cream);padding:52px 56px 36px;text-align:c
     <li><a href="#groups">Группы</a></li>
     <li><a href="#booking">Запись</a></li>
     <li><a href="#about">Обо мне</a></li>
+    <li><a href="#contacts">Контакты</a></li>
   </ul>
   <div class="nav-right">
     <button class="nav-profile-btn" id="navProfileBtn" onclick="openProfileModal()">Кабинет</button>
@@ -496,7 +508,7 @@ footer{background:#1a1008;color:var(--cream);padding:52px 56px 36px;text-align:c
       <div class="section-tag">Обо мне</div>
       <h2 class="section-title">Тренирую<br>с душой</h2>
       <p style="font-size:16px;color:var(--text2);line-height:1.8;margin-bottom:16px">Работаю с телом бережно и осознанно. Каждая тренировка — это не «отработать», а понять своё тело, сделать его сильнее.</p>
-      <p style="font-size:16px;color:var(--text2);line-height:1.8;margin-bottom:36px">Сертифицированный тренер, 2+ года опыта. Специализация: реабилитационный пилатес, глубокий стретчинг, функциональные тренировки.</p>
+      <p style="font-size:16px;color:var(--text2);line-height:1.8;margin-bottom:36px">Сертифицированный тренер, 2+ года опыта. Специализация: реабилитационный пилатес, глубокий стретчинг, функциональные тренировки. Тренировки доступны и онлайн.</p>
       <button class="btn-primary" onclick="scrollToBooking()">Записаться на первое занятие</button>
     </div>
     <div class="about-stats">
@@ -508,6 +520,29 @@ footer{background:#1a1008;color:var(--cream);padding:52px 56px 36px;text-align:c
   </div>
 </section>
 
+<!-- КОНТАКТЫ -->
+<section class="section" id="contacts">
+  <div class="section-tag">Контакты</div>
+  <h2 class="section-title">Где я и как<br>со мной связаться</h2>
+  <div class="contacts-grid">
+    <a href="https://yandex.ru/maps/?text=Нижний%20Новгород%2C%20бульвар%20Нефтепереработчиков%2C%2015%2C%20Кстово" target="_blank" rel="noopener" class="contact-card">
+      <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <div class="contact-title">Адрес студии</div>
+      <div class="contact-sub">бульвар Нефтепереработчиков, 15, Кстово, Нижний Новгород</div>
+    </a>
+    <a href="https://t.me/lebedeevaaa" target="_blank" rel="noopener" class="contact-card">
+      <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></div>
+      <div class="contact-title">Telegram</div>
+      <div class="contact-sub">@lebedeevaaa</div>
+    </a>
+    <a href="https://vk.com/lebedeevaaa" target="_blank" rel="noopener" class="contact-card">
+      <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M16 2H8a6 6 0 0 0-6 6v8a6 6 0 0 0 6 6h8a6 6 0 0 0 6-6V8a6 6 0 0 0-6-6z"/><path d="M9 9c0 4 2 6 3 7M15 9c0 4-2 6-3 7"/></svg></div>
+      <div class="contact-title">ВКонтакте</div>
+      <div class="contact-sub">vk.com/lebedeevaaa</div>
+    </a>
+  </div>
+</section>
+
 <footer>
   <div class="footer-logo">Лиза <span>Fitness</span></div>
   <div class="footer-sub">Пилатес · Стретчинг · Функциональный тренинг</div>
@@ -516,6 +551,11 @@ footer{background:#1a1008;color:var(--cream);padding:52px 56px 36px;text-align:c
     <li><a href="#groups">Группы</a></li>
     <li><a href="#booking">Запись</a></li>
     <li><a href="#about">Обо мне</a></li>
+    <li><a href="#contacts">Контакты</a></li>
+  </ul>
+  <ul class="footer-links" style="margin-top:-8px">
+    <li><a href="https://t.me/lebedeevaaa" target="_blank" rel="noopener">Telegram</a></li>
+    <li><a href="https://vk.com/lebedeevaaa" target="_blank" rel="noopener">ВКонтакте</a></li>
   </ul>
   <div class="footer-copy">© 2025 Елизавета. Все права защищены.</div>
 </footer>
